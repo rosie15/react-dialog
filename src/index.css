@@ -1,0 +1,59 @@
+/*
+* @Author: CJ Ting
+* @Date:   2016-07-14 16:39:45
+* @Last Modified by:   CJ Ting
+* @Last Modified time: 2016-07-14 17:39:40
+*/
+
+.react-dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+}
+
+.react-dialog__container {
+  max-width: 80%;
+  margin: auto;
+  border: solid 1px #ddd;
+  border-radius: 5px;
+  background: white;
+  text-align: center;
+}
+
+.react-dialog__header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.react-dialog__close-btn {
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.react-dialog__content {
+  padding: 20px 50px;
+}
+
+.react-dialog__buttons {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.react-dialog__buttons > div {
+  padding: 10px 40px;
+  display: inline-block;
+  cursor: pointer;
+  border: solid 1px #eee;
+}
+
+.react-dialog__cancel-btn {
+  margin-left: 20px;
+}
