@@ -2,7 +2,7 @@
 * @Author: CJ Ting
 * @Date:   2016-07-14 14:58:17
 * @Last Modified by:   CJ Ting
-* @Last Modified time: 2016-07-14 17:43:11
+* @Last Modified time: 2016-07-15 12:00:55
 */
 
 var path = require("path")
@@ -38,10 +38,24 @@ module.exports = {
   resolve: {
     extensions: ["", ".js", ".jsx"],
   },
-  externals: {
-    react: "React",
-    "react-dom": "ReactDOM",
-  },
+  externals: [
+    {
+      react: {
+        root: "React",
+        commonjs: "react",
+        commonjs2: "react",
+        amd: "react",
+      },
+    },
+    {
+      "react-dom": {
+        root: "ReactDOM",
+        commonjs: "react-dom",
+        commonjs2: "react-dom",
+        amd: "react-dom",
+      },
+    },
+  ],
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
       compress: {
