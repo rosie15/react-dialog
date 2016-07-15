@@ -2,7 +2,7 @@
 * @Author: CJ Ting
 * @Date:   2016-07-14 14:47:13
 * @Last Modified by:   CJ Ting
-* @Last Modified time: 2016-07-14 17:58:15
+* @Last Modified time: 2016-07-15 09:49:09
 */
 
 import "./index.css"
@@ -17,16 +17,27 @@ class Dialog extends React.Component {
     node.remove()
   }
 
+  ok = () => {
+    if(this.props.okButtonCB) {
+      this.props.okButtonCB.call(this)
+    } else {
+      this.destroy()
+    }
+  }
+
+  cancel = () => {
+    if(this.props.cancelButtonCB) {
+      this.props.cancelButtonCB.call(this)
+    } else {
+      this.destroy()
+    }
+  }
+
   render() {
     const klass = this.props.className ?
       "react-dialog " + this.props.className
       :
       "react-dialog"
-
-    let { okButtonCB, cancelButtonCB } = this.props
-
-    cancelButtonCB = cancelButtonCB || this.destroy
-    okButtonCB = okButtonCB || this.destroy
 
     return (
       <div
@@ -51,7 +62,7 @@ class Dialog extends React.Component {
           <div className="react-dialog__buttons">
             <div
               className="react-dialog__ok-btn"
-              onClick={ okButtonCB }
+              onClick={ this.ok }
             >
               { this.props.okButtonText }
             </div>
@@ -61,7 +72,7 @@ class Dialog extends React.Component {
                 null
                 :
                 <div
-                  onClick={ cancelButtonCB }
+                  onClick={ this.cancel }
                   className="react-dialog__cancel-btn"
                 >
                   { this.props.cancelButtonText }

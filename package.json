@@ -1,12 +1,13 @@
 {
-  "name": "react-dialog",
-  "version": "0.0.0",
+  "name": "@fate-lovely/react-dialog",
+  "version": "0.1.0",
   "description": "a simple dialog component for react",
   "main": "dist/index.js",
   "scripts": {
     "dev": "webpack-dev-server --hot --inline --content-base _dev --color --progress --port 9500",
     "lint": "eslint ./src",
-    "build": "webpack --config webpack.config.production.js --color --progress"
+    "build": "webpack --config webpack.config.production.js --color --progress",
+    "prepublish": "npm run build"
   },
   "pre-commit": [
     "lint"
@@ -44,9 +45,7 @@
     "react-dom": "^15.2.0",
     "style-loader": "0.13.1",
     "webpack": "^1.13.1",
-    "webpack-dev-server": "1.14.1"
-  },
-  "dependencies": {
+    "webpack-dev-server": "1.14.1",
     "babel-preset-stage-0": "6.5.0"
   }
 }
