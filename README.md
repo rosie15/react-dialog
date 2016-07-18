@@ -39,8 +39,8 @@ class App extends React.Component {
 - `className: PorpTypes.string`
 - `okButtonText: PropTypes.string`
 - `cancelButtonText: PropTypes.string`
-- `okButtonCB: PropTypes.func`, dialog instance as `this`, you can call `this.destroy()` to destroy dialog
-- `cancelButtonCB: PropTypes.func`, dialog instance as `this`, you can call `this.destroy()` to destroy dialog
+- `okButtonCB: PropTypes.func`, dialog instance as first param `cmp`, you can call `cmp.destroy()` to destroy dialog
+- `cancelButtonCB: PropTypes.func`, dialog instance as first param `cmp`, you can call `cmp.destroy()` to destroy dialog
 - `hideCancelButton: PropTypes.bool`
 - `title: PorpTypes.string`
 

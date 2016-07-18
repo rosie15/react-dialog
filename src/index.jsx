@@ -2,7 +2,7 @@
 * @Author: CJ Ting
 * @Date:   2016-07-14 14:47:13
 * @Last Modified by:   CJ Ting
-* @Last Modified time: 2016-07-15 09:49:09
+* @Last Modified time: 2016-07-18 14:57:19
 */
 
 import "./index.css"
@@ -19,7 +19,7 @@ class Dialog extends React.Component {
 
   ok = () => {
     if(this.props.okButtonCB) {
-      this.props.okButtonCB.call(this)
+      this.props.okButtonCB(this)
     } else {
       this.destroy()
     }
@@ -27,7 +27,7 @@ class Dialog extends React.Component {
 
   cancel = () => {
     if(this.props.cancelButtonCB) {
-      this.props.cancelButtonCB.call(this)
+      this.props.cancelButtonCB(this)
     } else {
       this.destroy()
     }
