@@ -29,7 +29,7 @@ const MyDialog = () =>
 class App extends React.Component {
   ...
   onClick() {
-    showDialog(MyDialog)
+    showDialog(MyDialog, props)
   }
 }
 ```

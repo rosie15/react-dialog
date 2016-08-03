@@ -2,7 +2,7 @@
 * @Author: CJ Ting
 * @Date:   2016-07-14 14:47:13
 * @Last Modified by:   CJ Ting
-* @Last Modified time: 2016-07-18 14:57:19
+* @Last Modified time: 2016-08-03 15:33:57
 */
 
 import "./index.css"
@@ -101,11 +101,11 @@ Dialog.propTypes = {
   title: PropTypes.string,
 }
 
-const showDialog = Cmp => {
+const showDialog = (Cmp, props) => {
   const div = document.createElement("div")
   div.className = "react-dialog-mountpoint"
   document.body.appendChild(div)
-  DOM.render(<Cmp />, div)
+  DOM.render(<Cmp {...props}/>, div)
 }
 
 export default showDialog

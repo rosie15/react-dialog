@@ -1,12 +1,14 @@
 # Change Log
 
+## 0.1.3
+- add second param `props` to `showDialog`
+
 ## 0.1.2
-- set this as first param in props.okButtonCB && props.cancelButtonCB
+- set component instance as first param in props.okButtonCB && props.cancelButtonCB
 
 ## 0.1.0
-- set this to dialog instance in props.okButtonCB && props.cancelButtonCB
+- set component instance to dialog instance in props.okButtonCB && props.cancelButtonCB
 - add README
 
 ## 0.0.0
-
-a basic version
+- a basic version

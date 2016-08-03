@@ -2,7 +2,7 @@
 * @Author: CJ Ting
 * @Date:   2016-07-14 14:56:23
 * @Last Modified by:   CJ Ting
-* @Last Modified time: 2016-07-14 17:39:22
+* @Last Modified time: 2016-08-03 15:35:18
 */
 
 import React from "react"
@@ -16,7 +16,10 @@ class App extends React.Component {
   }
 
   onClick(evt) {
-    showDialog(MyDialog)
+    showDialog(MyDialog, {
+      okText: "OK Button",
+      cancelText: "Cancel Button",
+    })
   }
 
   render() {
@@ -28,8 +31,10 @@ class App extends React.Component {
   }
 }
 
-const MyDialog = () =>
+const MyDialog = props =>
   <Dialog
+    okButtonText={ props.okText }
+    cancelButtonText={ props.cancelText }
     okButtonCB={ () => {
       showDialog(MyDialog2)
     }}
