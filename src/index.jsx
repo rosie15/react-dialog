@@ -1,8 +1,8 @@
 /*
 * @Author: CJ Ting
 * @Date:   2016-07-14 14:47:13
-* @Last Modified by:   rong.hua
-* @Last Modified time: 2016-10-12 18:53:44
+* @Last Modified by:   CJ Ting
+* @Last Modified time: 2016-10-12 19:22:57
 */
 
 import "./index.css"
@@ -61,7 +61,7 @@ class Dialog extends React.Component {
 
           <div className="react-dialog__buttons">
             <div
-              className={ `react-dialog__ok-btn ${this.props.disableOKButton ? "react-dialog__ok-btn--disabled" : ""}`}
+              className={ `react-dialog__ok-btn ${this.props.okButtonDisabled ? "react-dialog__ok-btn--disabled" : ""}`}
               onClick={ this.ok }
             >
               { this.props.okButtonText }
@@ -99,14 +99,14 @@ Dialog.propTypes = {
   cancelButtonCB: PropTypes.func,
   hideCancelButton: PropTypes.bool,
   title: PropTypes.string,
-  disableOKButton: PropTypes.bool,
+  okButtonDisabled: PropTypes.bool,
 }
 
-const showDialog = Cmp => {
+const showDialog = (Cmp, props) => {
   const div = document.createElement("div")
   div.className = "react-dialog-mountpoint"
   document.body.appendChild(div)
-  DOM.render(<Cmp />, div)
+  DOM.render(<Cmp {...props}/>, div)
 }
 
 export default showDialog
