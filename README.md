@@ -13,7 +13,7 @@ npm i --save @fate-lovely/react-dialog
 
 ### cdn
 ```html
-<script src="https://npmcdn.com/@fate-lovely/react-dialog/dist/index.js"></script>
+<script src="https://unpkg.com/@fate-lovely/react-dialog/dist/index.js"></script>
 ```
 
 ## Usage
