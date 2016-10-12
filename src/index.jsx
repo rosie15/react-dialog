@@ -1,8 +1,8 @@
 /*
 * @Author: CJ Ting
 * @Date:   2016-07-14 14:47:13
-* @Last Modified by:   CJ Ting
-* @Last Modified time: 2016-07-18 14:57:19
+* @Last Modified by:   rong.hua
+* @Last Modified time: 2016-10-12 18:53:44
 */
 
 import "./index.css"
@@ -61,7 +61,7 @@ class Dialog extends React.Component {
 
           <div className="react-dialog__buttons">
             <div
-              className="react-dialog__ok-btn"
+              className={ `react-dialog__ok-btn ${this.props.disableOKButton ? "react-dialog__ok-btn--disabled" : ""}`}
               onClick={ this.ok }
             >
               { this.props.okButtonText }
@@ -99,6 +99,7 @@ Dialog.propTypes = {
   cancelButtonCB: PropTypes.func,
   hideCancelButton: PropTypes.bool,
   title: PropTypes.string,
+  disableOKButton: PropTypes.bool,
 }
 
 const showDialog = Cmp => {

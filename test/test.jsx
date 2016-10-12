@@ -1,8 +1,8 @@
 /*
 * @Author: CJ Ting
 * @Date:   2016-07-14 14:56:23
-* @Last Modified by:   CJ Ting
-* @Last Modified time: 2016-07-14 17:39:22
+* @Last Modified by:   rong.hua
+* @Last Modified time: 2016-10-12 18:08:50
 */
 
 import React from "react"
@@ -33,6 +33,7 @@ const MyDialog = () =>
     okButtonCB={ () => {
       showDialog(MyDialog2)
     }}
+    disableOKButton = { true }
   >
     <h1>this is dialog content</h1>
   </Dialog>
