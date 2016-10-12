@@ -2,7 +2,7 @@
 * @Author: CJ Ting
 * @Date:   2016-07-14 14:47:13
 * @Last Modified by:   rong.hua
-* @Last Modified time: 2016-10-12 18:11:38
+* @Last Modified time: 2016-10-12 18:53:44
 */
 
 import "./index.css"
@@ -61,7 +61,7 @@ class Dialog extends React.Component {
 
           <div className="react-dialog__buttons">
             <div
-              className={ `react-dialog__ok-btn ${this.props.disableOKButton ? "button--disabled" : ""}`}
+              className={ `react-dialog__ok-btn ${this.props.disableOKButton ? "react-dialog__ok-btn--disabled" : ""}`}
               onClick={ this.ok }
             >
               { this.props.okButtonText }
