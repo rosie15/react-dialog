@@ -1,8 +1,8 @@
 /*
 * @Author: CJ Ting
 * @Date:   2016-07-14 14:47:13
-* @Last Modified by:   CJ Ting
-* @Last Modified time: 2016-10-12 19:22:57
+* @Last Modified by:   rong.hua
+* @Last Modified time: 2016-10-17 17:23:10
 */
 
 import "./index.css"
@@ -18,6 +18,7 @@ class Dialog extends React.Component {
   }
 
   ok = () => {
+    if(this.props.okButtonDisabled) return
     if(this.props.okButtonCB) {
       this.props.okButtonCB(this)
     } else {
